@@ -1,4 +1,5 @@
 import { defineConfig } from 'vite'
+import { resolve } from 'path'
 
 export default defineConfig({
   server: {
@@ -10,7 +11,14 @@ export default defineConfig({
       }
     }
   },
+  resolve: {
+    alias: {
+      '@sso-auth/core': resolve(__dirname, '../../packages/core/src/index.ts'),
+      '@sso-auth/components': resolve(__dirname, '../../packages/components/src/define.ts'),
+      '@sso-auth/embedded': resolve(__dirname, '../../packages/embedded/src/index.ts')
+    }
+  },
   optimizeDeps: {
-    exclude: ['@sso-auth/core', '@sso-auth/components', '@sso-auth/embedded']
+    include: ['lit', '@lit/context']
   }
 })

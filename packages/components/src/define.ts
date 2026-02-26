@@ -24,13 +24,3 @@ import './sessions/sso-sessions.js';
 // Applications
 import './applications/sso-app-list.js';
 import './applications/sso-app-form.js';
-
-console.log('@sso-auth/components loaded. Available components:');
-console.log('  - <sso-provider>');
-console.log('  - <sso-login>');
-console.log('  - <sso-register>');
-console.log('  - <sso-profile>');
-console.log('  - <sso-password>');
-console.log('  - <sso-sessions>');
-console.log('  - <sso-app-list>');
-console.log('  - <sso-app-form>');
