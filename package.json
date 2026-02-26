@@ -1,15 +1,21 @@
 {
-  "name": "sso-server",
+  "name": "sso-auth-monorepo",
   "version": "1.0.0",
-  "description": "SSO Authentication Server",
+  "private": true,
+  "description": "SSO Authentication - Backend Server & Frontend SDK",
   "type": "module",
-  "main": "src/server.js",
   "scripts": {
     "dev": "node --watch src/server.js",
     "start": "node src/server.js",
     "prisma:migrate": "npx prisma migrate dev",
     "prisma:generate": "npx prisma generate",
-    "prisma:studio": "npx prisma studio"
+    "prisma:studio": "npx prisma studio",
+    "build:frontend": "pnpm -r --filter './packages/*' run build",
+    "build:core": "pnpm --filter @sso-auth/core build",
+    "build:components": "pnpm --filter @sso-auth/components build",
+    "build:embedded": "pnpm --filter @sso-auth/embedded build",
+    "demo": "pnpm --filter demo dev",
+    "clean": "pnpm -r run clean"
   },
   "dependencies": {
     "@fastify/cors": "^10.0.1",
@@ -23,6 +29,13 @@
     "uuid": "^11.0.3"
   },
   "devDependencies": {
-    "prisma": "^6.4.1"
+    "prisma": "^6.4.1",
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
+  },
+  "packageManager": "pnpm@8.15.4",
+  "engines": {
+    "node": ">=18"
   }
 }

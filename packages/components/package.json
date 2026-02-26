@@ -1,0 +1,51 @@
+{
+  "name": "@sso-auth/components",
+  "version": "1.0.0",
+  "description": "SSO Authentication Web Components - Login, Register, Profile UI",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./define": {
+      "import": "./dist/define.js",
+      "types": "./dist/define.d.ts"
+    },
+    "./themes/default.css": "./dist/themes/default.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@sso-auth/core": "workspace:*",
+    "lit": "^3.1.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "sso",
+    "authentication",
+    "web-components",
+    "lit",
+    "login",
+    "oauth"
+  ],
+  "license": "MIT"
+}

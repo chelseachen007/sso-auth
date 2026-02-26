@@ -1,0 +1,41 @@
+{
+  "name": "@sso-auth/core",
+  "version": "1.0.0",
+  "description": "SSO Authentication Core SDK - API client and token management",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite build --watch",
+    "build": "vite build && tsc --emitDeclarationOnly",
+    "clean": "rm -rf dist",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "sso",
+    "authentication",
+    "oauth",
+    "token"
+  ],
+  "license": "MIT"
+}

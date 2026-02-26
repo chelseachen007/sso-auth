@@ -10,6 +10,8 @@ database/
 .env
 .env.local
 .env.*.local
+.env.development
+.env.production
 
 # Logs
 logs/
@@ -29,3 +31,4 @@ Thumbs.db
 # Build
 dist/
 build/
+.env.devlopment
