@@ -16,7 +16,7 @@ export default defineConfig({
     sourcemap: true,
     minify: false,
     rollupOptions: {
-      external: ['lit', 'lit/decorators.js', 'lit/directives/class-map.js', '@sso-auth/core'],
+      external: ['lit', 'lit/decorators.js', 'lit/directives/class-map.js', '@lit/context', '@sso-auth/core'],
       output: {
         globals: {
           lit: 'Lit',

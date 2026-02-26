@@ -3,8 +3,8 @@
  */
 
 import { LitElement, html, css } from 'lit';
-import { customElement, property, state, consume } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
+import { customElement, property, state } from 'lit/decorators.js';
+import { consume } from '@lit/context';
 import { ssoClientContext } from '../sso-provider.js';
 import { SsoClient, ApiError } from '@sso-auth/core';
 import { baseStyles, formStyles, buttonStyles, cardStyles } from '../common/styles.js';

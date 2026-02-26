@@ -3,10 +3,11 @@
  */
 
 import { LitElement, html, css } from 'lit';
-import { customElement, property, state, consume } from 'lit/decorators.js';
+import { customElement, property, state } from 'lit/decorators.js';
+import { consume } from '@lit/context';
 import { classMap } from 'lit/directives/class-map.js';
 import { ssoClientContext, ssoThemeContext } from '../sso-provider.js';
-import { SsoClient, type SsoUser, ApiError } from '@sso-auth/core';
+import { SsoClient, ApiError } from '@sso-auth/core';
 import type { SsoTheme } from '../themes/index.js';
 import { baseStyles, formStyles, buttonStyles, cardStyles, oauthButtonStyles } from '../common/styles.js';
 

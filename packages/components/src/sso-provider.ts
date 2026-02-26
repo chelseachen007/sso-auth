@@ -4,10 +4,10 @@
  */
 
 import { LitElement, html } from 'lit';
-import { customElement, property, provide } from 'lit/decorators.js';
-import { createContext } from '@lit/context';
-import { SsoClient, type SsoClientConfig, type SsoUser, type SsoStoreState } from '@sso-auth/core';
-import { defaultTheme, generateCssVariables, type SsoTheme } from '../themes/index.js';
+import { customElement, property } from 'lit/decorators.js';
+import { provide, createContext } from '@lit/context';
+import { SsoClient, type SsoUser, type SsoStoreState } from '@sso-auth/core';
+import { defaultTheme, darkTheme, generateCssVariables, type SsoTheme } from './themes/index.js';
 
 // 创建 Context
 export const ssoClientContext = createContext<SsoClient | null>('sso-client');
@@ -104,7 +104,6 @@ export class SsoProvider extends LitElement {
     } catch {
       // 预设主题名称
       if (this.theme === 'dark') {
-        const { darkTheme } = require('../themes/index.js');
         this.themeConfig = darkTheme;
       } else {
         this.themeConfig = defaultTheme;
