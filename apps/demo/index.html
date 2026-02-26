@@ -326,7 +326,8 @@ await client.logout();</code></pre>
 
   <script type="module">
     import '@sso-auth/components';
-    import { SsoClient, SsoEmbedded } from '@sso-auth/core';
+    import { SsoClient } from '@sso-auth/core';
+    import { SsoEmbedded } from '@sso-auth/embedded';
 
     // 初始化客户端
     const client = new SsoClient({
